@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+group = 'ru.shadam.spring.social'
+version = '1.0.0-SNAPSHOT'
+
+compileJava {
+	sourceCompatibility = '1.6'
+	targetCompatibility = '1.6'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.social:spring-social-core:1.1.0.RELEASE'
+    compile 'org.springframework.social:spring-social-twitter:1.1.0.RELEASE'
+}
+
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.0'
+}
