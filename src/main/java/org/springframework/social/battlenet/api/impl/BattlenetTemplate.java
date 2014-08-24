@@ -3,6 +3,7 @@ package org.springframework.social.battlenet.api.impl;
 import org.springframework.social.battlenet.api.AccountOperations;
 import org.springframework.social.battlenet.api.Battlenet;
 import org.springframework.social.oauth2.AbstractOAuth2ApiBinding;
+import org.springframework.social.oauth2.TokenStrategy;
 
 /**
  * @author sala
@@ -11,7 +12,7 @@ public class BattlenetTemplate extends AbstractOAuth2ApiBinding implements Battl
     private AccountOperations accountOperations;
 
     public BattlenetTemplate(String accessToken) {
-        super(accessToken);
+        super(accessToken, TokenStrategy.ACCESS_TOKEN_PARAMETER);
         initSubApi();
     }
 
