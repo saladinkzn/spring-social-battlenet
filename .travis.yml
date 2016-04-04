@@ -9,9 +9,6 @@ env:
   global:
     - secure: "k/1fazHnTqls9hJMkcO3mn58Xt1EfFnr48StUOUX+Pku/ZIuKWJMSpwM3X9ZkoecprmnOz347KuUEOrWva+Ze1DHNFrFoxtMN1cTT/R1klTNfzv+l88yHt3gHGxG5BY1G75t09rn82yVIhCmcVP7NNeVHzp+D+bRHx5bAtc2QTY="
     - secure: "hisXleXmZoF40zgfZnKBnFnVb18UHayjFdVMKOJWvXemzIHu4uMIvXHg3ImQ7BR85dgN0BWMGrrihds+c1qK+vCjWK17fHlO7fDV3YMmiutLzD2gWCAt6Gns0hU5OPBGIMhfhhJSaTL+sYcxy4k5wrwbIL7U3nzfU7s519Q7/g0="
-
-
-
 deploy:
   - provider: script
     skip_cleanup: true
