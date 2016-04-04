@@ -1,7 +1,14 @@
-apply plugin: 'java'
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
+  }
+}
 
-group = 'ru.shadam.spring.social'
-version = '1.0.0-SNAPSHOT'
+apply plugin: 'java'
+apply from: 'publish.gradle'
 
 compileJava {
 	sourceCompatibility = '1.6'
@@ -14,9 +21,7 @@ repositories {
 
 dependencies {
     compile 'org.springframework.social:spring-social-core:1.1.0.RELEASE'
-    compile 'org.springframework.social:spring-social-twitter:1.1.0.RELEASE'
 }
-
 
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.0'
